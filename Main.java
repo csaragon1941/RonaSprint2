@@ -22,78 +22,35 @@ public class Main {
 		String intro = keyboardInput.nextLine();
 		
 		boolean readyPlay = true; 
+		
 	do {
 		
-		if(intro.equals("Yes")) {
-			Scanner keyboardInput1 = new Scanner(System.in);
-// Mad Lib Prompt Idea (pghpaper.com)		
-			System.out.print("Enter the name of a person: ");
-			String person = keyboardInput1.nextLine();
+		MadQuiz1 MadObject = new MadQuiz1(); 
+		MadObject.lib1(); 
 		
-			System.out.print("Enter an action (present tense): ");
-			String action = keyboardInput1.nextLine();
 		
-			System.out.print("Enter something that Prof. Vanselow would do (-ing): ");
-			String wwpvd = keyboardInput1.nextLine();
-			// wwpvd = What would Prof Vanselow do
-			
-			// For the equation in the system
-			int a = 2;
-			int b = 1;
-			int c = 4;
-			//NUMBER OF PLANTS
-			int dice1 = 0;
-			Random r1 = new Random();
-			dice1 = r1.nextInt(10)+1;
-			int numPlants= dice1 + (a + c - b) * b % a; 
-
-			// TYPE OF PLANTS 
-			double dice2 = 0;
-			Random r2 = new Random();
-			dice2 = r2.nextInt(10)+1;
-			double numType= dice2 + (a + c - b) * b / a;
+		System.out.println();
+		plant plant1 = new plant();
+		plant plant2 = new plant();
 		
-			System.out.println("The coronavirus has taken a toll on everyone, especially " + person + "\n"
-						+ "President Martin has asked students to " + action + "\n"
-						+ "That didn't stop Professor Vanselow from " + wwpvd + "\n"
-						+ "Professor Vanselow seems like a neat guy, he has " + Math.abs(numPlants) + " in his garden "
-						+ "and definetly has " + Math.abs(numType) + " different plants");
-	
-			String compare = numType>numPlants ? "He has more variety of plant" : "He has ALOT of the same Plant"; 
-			System.out.println(compare);
-				
-			boolean diverse = numType > 6;
-			
-			while (diverse == true) {
-				System.out.print("What a diverse plant guy \n");	
-				break; // The break is to stop the loop from becoming an infinite loop and doesnt have a reason to go to the rest of the code
-			}
-			
-			switch(numPlants) {
-			case 1:
-				System.out.println("Step up your plant game sir ");
-			case 2:
-				System.out.println("TWO JUST TWO ");
-			case 3:
-				System.out.println("Eh treat yourself with another plant " );
-			case 4:
-				System.out.println("Yee Yee Good Plants " );
-			default:
-				System.out.println("WE GOT OURSELF A PLANT OWENER " );
-			
-			}
-			
+		System.out.println(plant1.getTypePlant());
+		plant1.setTypePlant("Sunflower");
+		System.out.println(plant1.getTypePlant());
+		System.out.println(plant2.getTypePlant());
+		System.out.println();
 		
-			
-			}		
-		else {
-				
+		System.out.println(); 
+// PRESS ANY KEY TO CONINTUE SECTION	
+				System.out.println("Comparing two strings together");
+				System.out.println();
 				Scanner keyboardInput1 = new Scanner(System.in); 
-				System.out.print("Press Anykey to continuef"); 
+				System.out.print("Press Anykey to continue"); 
 				String intro2 = keyboardInput1.nextLine();
+				System.out.println(); 
 		// Comparing two string together
 				String spongebob = "yellow and square" ; 
 				String gary = "snail"; 
+				System.out.println(); 
 				
 				int var1 = spongebob.compareTo(gary);
 				System.out.println("Spongebob & Gary comparison: " + var1);
@@ -109,7 +66,8 @@ public class Main {
 					}	
 					for(int i=3; i <5; i --) {
 						System.out.println("value of i: " + i + "\n");
-						break;
+						break; 
+						
 					}
 					
 					int x = 0;
@@ -118,7 +76,8 @@ public class Main {
 					System.out.println("The answer to += is: " + opp); 
 					System.out.println("");
 					int lit = 1; 
-						
+					System.out.println(); 
+					
 					
 					
 						double first_num, second_num, answer;
@@ -129,7 +88,7 @@ public class Main {
 								System.out.println("Double Variable Exmaple Output: "
 												+ "Sum of Num = " + answer + "\n"
 												+ "                   ");
-
+								System.out.println(); 
 								
 								final int digit;
 								digit = 10;
@@ -137,20 +96,25 @@ public class Main {
 								System.out.println("Int. Exmaple Output: "
 												+ " = " + digit + "\n"
 											+ "                   ");
-				
-					
+								
+								System.out.println(); 
+								Ray rayObject = new Ray(); 
+								rayObject.array(); 
+								System.out.println(); 
 								
 								System.out.println("Come Back Again");
 							
-				}
+				} 	while(!readyPlay);
 				
-			}
+	}
+
+	
 			
-		while(!readyPlay);
+	
 		
 
 			
-		}
+		
 
 	private static Object assertThat(boolean contentEquals) {
 		// TODO Auto-generated method stub
@@ -161,12 +125,9 @@ public class Main {
 
 // Operator precedence is the order that the operator goes first in the expression
 
-
-
-
-// What is Variable
+// Sprint 1
+// What is Variable?
 // In programing a value is a part of the program that can change depending on 
 //its condition or on info passed to the program
-
 // What is the term Scope?
 // A scope refers to the visibility of variables
